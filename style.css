@@ -1,0 +1,78 @@
+@font-face{
+	src: url(/fonts/OpenSans-Regular.ttf);
+	font-family: opensans-regular;
+}
+@font-face{
+	src: url(./fonts/Stencil_Regular.ttf);
+	font-family: stencil-regular;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    font-family: opensans-regular;
+}
+
+.navbar{
+	height: 120px;
+	width: 100%;
+}
+
+.nav{
+	margin:  0 200px;
+}
+
+.nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.nav li{
+	float: left;
+}
+
+.nav li a{
+	display: block;
+	color: black;
+	text-align: center;
+	padding:8px 12px;
+	text-decoration: none;
+}
+
+#logo{
+	font-family: stencil-regular;
+	font-size: 55px;
+	padding-right: 35px;
+}
+#meniu{
+	padding-top: 20px;
+	font-family: opensans-regular;
+	font-size: 25px;
+}
+.search{
+	width: 150px;
+	height: 50px;
+	border: 2px solid purple;
+	border-radius: 30px;
+}
+
+.right{
+	float:right !important;
+}
+
+.nav input{
+	width: 150px;
+	height: 35px;
+	box-sizing: border-box;
+	border: none;
+	border: 1.4px solid #655AFF;
+	border-radius: 20px;
+	margin-top: 8px;
+	margin-right: 10px;
+
+}
