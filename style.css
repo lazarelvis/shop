@@ -131,3 +131,18 @@ padding-top: 300px;
 .column2 img{
 	width: 100%;
 }
+
+@media only screen and (max-width: 1366px) {
+    
+	.column2 img{
+		height: 643px;
+		width: 550px;
+	}
+	.column1 h1{
+		font-size: 50px;
+	}
+	.column1 p{
+		font-size: 25px;
+		width: 400px;
+	}
+}
