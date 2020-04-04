@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>M&E | Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <!-- <h1>M&E</h1> -->
-    <div class="navbar">
-      <div class="nav">
-        <ul>
-            <li id="logo"><a href="#">M&E</a></li>
-            <li id="meniu"><a href="#">Acasa</a></li>
-            <li id="meniu"><a href="#">Produse</a></li>
-            <li id="meniu"><a href="#">Oferte</a></li>
-            <li id="meniu" class="right"><a href="#"><i class="fas fa-shopping-basket"></i></a></li>
-            <li id="meniu" class="right"><a href="#"><i class="fas fa-user"></i></a></li>
-            <li id="meniu" class="right"><input type="text" placeholder="     Cauta in magazin..."></li>
+ <nav class="navbar">
+		<span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">M&E</a>
+        <ul class="main-nav" id="js-menu">
+            <li class="da" id="acasa">
+                <a href="#" class="nav-links">Acasa</a>
+            </li>
+            <li class="da" id="prod">
+                <a href="#" class="nav-links">Produse</a>
+            </li>
+            <li class="da" id="ofe">
+                <a href="#" class="nav-links">Oferte</a>
+            </li>
+            <li class="nu">
+                <a href="#" class="nav-links">Search</a>
+            </li>
+            <li class="nu">
+                <a href="#" class="nav-links">Cont</a>
+            </li>
         </ul>
-      </div>
-    </div>
-  <div class="container">
-    <div class="row">
-      <div class="column1">
-        <h1>CUMPARĂ-L.</h1>
-        <p>Cumpara cel mai fresh merch
-          doar cu un click.</p>
-          <form>
-            <button class="button">Apasa aici</button>
-          </form>
-      </div>
-      <div class="column2">
-        <img src="./img/img1.png"/>
-      </div>
-    </div>
-  </div>
+</nav>
 </body>
+<script>
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function () {
+    
+    mainNav.classList.toggle('active');
+});
+</script>
 </html>
+
+<!-- <li id="meniu" class="right"><a href="#"><i class="fas fa-shopping-basket"></i></a></li>
+<li id="meniu" class="right"><a href="#"><i class="fas fa-user"></i></a></li>
+<li id="meniu" class="right"><input type="text" placeholder="     Cauta in magazin..."></li> -->
