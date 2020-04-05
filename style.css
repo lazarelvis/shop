@@ -21,6 +21,7 @@
 }
 body {
     font-family: opensans-regular;
+    font-size: 1rem;
 }
 .fas{
     color: black;
@@ -126,7 +127,8 @@ body {
     .logo:hover,
     .nav-links:hover {
         color: rgba(255, 255, 255, 1);
-	}
+    }
+   
 }
 
 @media screen and (min-width: 1400px) {
@@ -159,12 +161,12 @@ body {
 	height: 100%;
 }
 .column1 h1{
-font-size: 65px;
+font-size: 4rem;
 font-family: poppins-bold;
 padding-top: 300px;
 }
 .column1 p{
-	font-size: 35px;
+	font-size: 2.1rem;
 	font-family: poppins-medium;
 	padding: 10px 0 30px;
 	width: 550px;
@@ -177,7 +179,7 @@ padding-top: 300px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 22px;
+	font-size: 1.37em;
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 10px;
@@ -192,4 +194,23 @@ padding-top: 300px;
 }
 .column2 img{
 	width: 100%;
+}
+
+@media screen and (max-width: 1367px) {
+
+    .column1 p{
+        width: 450px;
+    }
+    
+    .column1 h1{
+        font-size: 3.1rem;
+    }
+    .column1 p{
+        font-size: 1.7rem;
+    }
+    .column2 img{
+        width: 125%;
+    }
+    
+
 }
