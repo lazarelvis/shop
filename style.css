@@ -26,6 +26,7 @@ body {
 .fas{
     color: black;
 }
+
 .navbar {
     font-size: 18px;
     padding-bottom: 10px;
@@ -95,7 +96,15 @@ body {
 	.nu{
 	display:inline;
 
-	}
+    }
+    
+    li a:hover{
+        color: #655AFF;
+    }
+    li a i:hover{
+        color: #655AFF;
+    }
+    
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -126,7 +135,7 @@ body {
     }
     .logo:hover,
     .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
+        color: #655AFF;
     }
    
 }
