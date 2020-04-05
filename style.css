@@ -78,9 +78,38 @@ body {
     border-radius: 20px;
     margin-left:  30px;
 }
+.container{
+    display: none;
+}
+.coloana,.coloana2{
+    position: relative;
+}
+.telefon img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
+.coloana2 {
+    position: relative;
+    font-size: 2rem;
+    margin: 10px 10px;
+    text-align: center;
+    top: 35rem;
+}
+.coloana2 button{
+    font-size: 1.4rem;
+}
 
 @media screen and (min-width: 768px) {
+   .telefon,.coloana{
+       display: none;
+   }
 
+    .container{
+        display: block;
+    }
     #acasa,#produse,#oferte{
         padding-top: 5px;
     }
