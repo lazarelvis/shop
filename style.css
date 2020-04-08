@@ -78,7 +78,7 @@ body {
     border-radius: 20px;
     margin-left:  30px;
 }
-.container{
+.container1{
     display: none;
 }
 .coloana,.coloana2{
@@ -102,12 +102,13 @@ body {
     font-size: 1.4rem;
 }
 
+
 @media screen and (min-width: 768px) {
    .telefon,.coloana{
        display: none;
    }
 
-    .container{
+    .container1{
         display: block;
     }
     #acasa,#produse,#oferte{
@@ -187,7 +188,7 @@ body {
 
 
 
-.container{
+.container1{
 	margin: 0 210px;
 }
 .row{
@@ -252,3 +253,4 @@ padding-top: 300px;
     
 
 }
+
