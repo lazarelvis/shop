@@ -14,6 +14,11 @@
 	src: url(./fonts/Poppins-Medium.ttf);
 	font-family: poppins-medium;
 }
+@font-face{
+	src: url(./fonts/Poppins-Regular.ttf);
+	font-family: poppins-regular;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -26,7 +31,10 @@ body {
 .fas{
     color: black;
 }
-
+.card-body p{
+    font-size: 1.5rem;
+    font-family: poppins-regular;
+}
 .navbar {
     font-size: 18px;
     padding-bottom: 10px;
@@ -167,7 +175,7 @@ body {
     .nav-links:hover {
         color: #655AFF;
     }
-   
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -183,7 +191,7 @@ body {
     }
     .fas{
         font-size: 30px;
-    }
+    }  
 }
 
 
