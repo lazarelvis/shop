@@ -1,0 +1,157 @@
+@font-face{
+	src: url(./fonts/OpenSans-Regular.ttf);
+	font-family: opensans-regular;
+}
+@font-face{
+	src: url(./fonts/Stencil_Regular.ttf);
+	font-family: stencil-regular;
+}
+@font-face{
+	src: url(./fonts/Poppins-Bold.ttf);
+	font-family: poppins-bold;
+}
+@font-face{
+	src: url(./fonts/Poppins-Medium.ttf);
+	font-family: poppins-medium;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: opensans-regular;
+    font-size: 1rem;
+}
+.fas{
+    color: black;
+}
+
+.navbar {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.main-nav {
+    list-style-type: none;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: black;
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 22px;
+}
+.logo {
+    display: inline-block;
+    font-size: 38px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: stencil-regular;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: black;
+    font-size: 35px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+.active {
+  display: block;
+}
+.nu{
+	display:none;
+}
+.main-nav input{
+    width: 220px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border: 2px solid #655AFF;
+    border-radius: 20px;
+    margin-left:  30px;
+}
+
+@media screen and (min-width: 768px) {
+  
+    #acasa,#produse,#oferte{
+        padding-top: 5px;
+    }
+
+    .logo{
+	font-size: 40px;
+	}
+    .navbar{
+	margin: 0 200px;
+	height: 120px;
+	font-size: 24px;
+	}
+	.nu{
+	display:inline;
+
+    }
+    
+    li a:hover{
+        color: #655AFF;
+    }
+    li a i:hover{
+        color: #655AFF;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links{
+        margin-left: 40px;
+    }
+    .nav-links i {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color: #655AFF;
+    }
+   
+}
+
+@media screen and (min-width: 1400px) {
+
+    .logo{
+        font-size: 60px;
+    }
+    .navbar{
+        padding-top: 10px;
+    }
+    .main-nav li {
+        font-size: 27px;
+    }
+    .fas{
+        font-size: 30px;
+    }
+}
