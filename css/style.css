@@ -1,21 +1,21 @@
 @font-face{
-	src: url(./fonts/OpenSans-Regular.ttf);
+	src: url(../fonts/OpenSans-Regular.ttf);
 	font-family: opensans-regular;
 }
 @font-face{
-	src: url(./fonts/Stencil_Regular.ttf);
+	src: url(../fonts/Stencil_Regular.ttf);
 	font-family: stencil-regular;
 }
 @font-face{
-	src: url(./fonts/Poppins-Bold.ttf);
+	src: url(../fonts/Poppins-Bold.ttf);
 	font-family: poppins-bold;
 }
 @font-face{
-	src: url(./fonts/Poppins-Medium.ttf);
+	src: url(../fonts/Poppins-Medium.ttf);
 	font-family: poppins-medium;
 }
 @font-face{
-	src: url(./fonts/Poppins-Regular.ttf);
+	src: url(../fonts/Poppins-Regular.ttf);
 	font-family: poppins-regular;
 }
 
