@@ -172,3 +172,69 @@ body {
         font-size: 30px;
     }
 }
+
+  .login{
+    background-color: white;
+    padding: 15px;
+    display:none;
+    margin-top: 50px;
+    position: absolute;
+    right: 47px;
+    width: 300px;
+    z-index: 6;
+  }
+  @media screen and (max-width: 450px) {
+    .login{
+        left: 0;
+        right: 0;
+        top: 160px;
+        margin: 50px auto;
+    }
+    .triangle{
+        margin-left: 125px;
+      }
+}
+@media screen and (min-width: 1000px) {
+    
+    .triangle{
+        margin-left: 200px;
+      }
+      
+}
+  .field-title{
+      font-size: 1.2rem;
+  }
+  .triangle{
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #655AFF;
+    border-left: 12px solid transparent;
+    width: 0;
+  }
+  
+ 
+  input[type="email"],input[type="password"]{
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #655AFF;
+    margin-bottom: 12px;
+    padding: 8px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  input[type="submit"]{
+    background: #655AFF;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  
+  input[type="submit"]:hover{
+    background:#473FBB;
+  }
