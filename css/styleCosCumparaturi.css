@@ -494,3 +494,6 @@ body {
   input[type="submit"]:hover{
     background:#473FBB;
   }
+  input[type="button"]{
+    background-color: white;
+}

@@ -350,3 +350,6 @@ padding-top: 300px;
     }
     
 }
+input[type="button"]{
+    background-color: white;
+}
