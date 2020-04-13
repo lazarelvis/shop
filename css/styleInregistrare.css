@@ -32,3 +32,246 @@ body{
 	height: 100px;
 	background-color: white;
 }
+@font-face{
+	src: url(../fonts/OpenSans-Regular.ttf);
+	font-family: opensans-regular;
+}
+@font-face{
+	src: url(../fonts/Stencil_Regular.ttf);
+	font-family: stencil-regular;
+}
+@font-face{
+	src: url(../fonts/Poppins-Bold.ttf);
+	font-family: poppins-bold;
+}
+@font-face{
+	src: url(../fonts/Poppins-Medium.ttf);
+	font-family: poppins-medium;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.navbar a{
+    text-decoration: none;
+}
+body {
+    font-family: opensans-regular;
+    font-size: 1rem;
+}
+.fas{
+    color: black;
+}
+
+.navbar {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.main-nav {
+    list-style-type: none;
+    padding-top: 15px;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: black;
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 22px;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 38px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: stencil-regular;
+    position: absolute;
+    top: 0;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: black;
+    font-size: 35px;
+}
+.main-nav {
+    margin-top: 50px;
+    margin: auto;
+    list-style-type: none;
+    display: none;
+    
+}
+.active {
+  display: block;
+}
+.logo:active a{
+    display: inline-block;
+
+}
+
+.nu{
+	display:none;
+}
+.main-nav input{
+    width: 220px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border: 2px solid #655AFF;
+    border-radius: 20px;
+    margin-left:  30px;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  
+    #acasa,#produse,#oferte{
+        padding-top: 5px;
+    }
+
+    .logo{
+        padding-top: 15px;
+        position: relative;
+	font-size: 40px;
+	}
+    .navbar{
+	margin: 0 200px;
+	height: 120px;
+	font-size: 24px;
+	}
+	.nu{
+	display:inline;
+
+    }
+    
+    li a:hover{
+        color: #655AFF;
+    }
+    li a i:hover{
+        color: #655AFF;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links{
+        margin-left: 40px;
+    }
+    .nav-links i {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,.nav-links:hover {
+        color: #655AFF;
+    }
+   
+}
+
+@media screen and (min-width: 1400px) {
+
+    .logo{
+        font-size: 60px;
+    }
+    .navbar{
+        padding-top: 10px;
+    }
+    .main-nav li {
+        font-size: 27px;
+    }
+    .fas{
+        font-size: 30px;
+    }
+}
+
+  .login{
+    background-color: white;
+    padding: 15px;
+    display:none;
+    margin-top: 50px;
+    position: absolute;
+    right: 47px;
+    width: 300px;
+    z-index: 6;
+  }
+  @media screen and (max-width: 450px) {
+    .login{
+        left: 0;
+        right: 0;
+        top: 160px;
+        margin: 50px auto;
+    }
+    .triangle{
+        margin-left: 125px;
+      }
+}
+@media screen and (min-width: 1000px) {
+    
+    .triangle{
+        margin-left: 200px;
+      }
+      
+}
+  .field-title{
+      font-size: 1.2rem;
+  }
+  .triangle{
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #655AFF;
+    border-left: 12px solid transparent;
+    width: 0;
+  }
+  
+ 
+  input[type="email"],input[type="password"]{
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #655AFF;
+    margin-bottom: 12px;
+    padding: 8px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  input[type="submit"]{
+    background: #655AFF;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  
+  input[type="submit"]:hover{
+    background:#473FBB;
+  }
+  input[type="button"]{
+      background-color: white;
+  }
