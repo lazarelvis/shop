@@ -1,3 +1,4 @@
+
 @font-face{
 	src: url(../fonts/OpenSans-Regular.ttf);
 	font-family: opensans-regular;
@@ -14,15 +15,13 @@
 	src: url(../fonts/Poppins-Medium.ttf);
 	font-family: poppins-medium;
 }
-@font-face{
-	src: url(../fonts/Poppins-Regular.ttf);
-	font-family: poppins-regular;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+.navbar a{
+    text-decoration: none;
 }
 body {
     font-family: opensans-regular;
@@ -31,16 +30,14 @@ body {
 .fas{
     color: black;
 }
-.card-body p{
-    font-size: 1.5rem;
-    font-family: poppins-regular;
-}
+
 .navbar {
     font-size: 18px;
     padding-bottom: 10px;
 }
 .main-nav {
     list-style-type: none;
+    padding-top: 15px;
 }
 .nav-links,
 .logo {
@@ -52,12 +49,15 @@ body {
     margin: 15px auto;
     font-size: 22px;
 }
+
 .logo {
     display: inline-block;
     font-size: 38px;
     margin-top: 10px;
     margin-left: 20px;
     font-family: stencil-regular;
+    position: absolute;
+    top: 0;
 }
 .navbar-toggle {
     position: absolute;
@@ -68,12 +68,20 @@ body {
     font-size: 35px;
 }
 .main-nav {
+    margin-top: 50px;
+    margin: auto;
     list-style-type: none;
     display: none;
+    
 }
 .active {
   display: block;
 }
+.logo:active a{
+    display: inline-block;
+
+}
+
 .nu{
 	display:none;
 }
@@ -85,45 +93,18 @@ body {
     border: 2px solid #655AFF;
     border-radius: 20px;
     margin-left:  30px;
+    font-size: 15px;
 }
-.container1{
-    display: none;
-}
-.coloana,.coloana2{
-    position: relative;
-}
-.telefon img{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-}
-.coloana2 {
-    position: relative;
-    font-size: 2rem;
-    margin: 10px 10px;
-    text-align: center;
-    top: 35rem;
-}
-.coloana2 button{
-    font-size: 1.4rem;
-}
-
 
 @media screen and (min-width: 768px) {
-   .telefon,.coloana{
-       display: none;
-   }
-
-    .container1{
-        display: block;
-    }
+  
     #acasa,#produse,#oferte{
         padding-top: 5px;
     }
 
     .logo{
+        padding-top: 15px;
+        position: relative;
 	font-size: 40px;
 	}
     .navbar{
@@ -171,11 +152,10 @@ body {
    .navbar-toggle {
        display: none;
     }
-    .logo:hover,
-    .nav-links:hover {
+    .logo:hover,.nav-links:hover {
         color: #655AFF;
     }
-
+   
 }
 
 @media screen and (min-width: 1400px) {
@@ -191,7 +171,117 @@ body {
     }
     .fas{
         font-size: 30px;
-    }  
+    }
+}
+
+  .login{
+    background-color: white;
+    padding: 15px;
+    display:none;
+    margin-top: 50px;
+    position: absolute;
+    width: 300px;
+    z-index: 6;
+  }
+  @media screen and (max-width: 450px) {
+    .login{
+        left: 0;
+        right: 0;
+        top: 160px;
+        margin: 50px auto;
+    }
+    .triangle{
+        margin-left: 120px;
+      }
+}
+@media screen and (min-width: 1000px) {
+    
+    .triangle{
+        margin-left: 200px;
+      }
+}
+@media screen and (min-width: 1920px) {
+    
+  .triangle{
+      margin-left: 190px;
+    }
+}
+  .field-title{
+      font-size: 1.2rem;
+  }
+  .triangle{
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #655AFF;
+    border-left: 12px solid transparent;
+    width: 0;
+  }
+  
+ 
+  input[type="email"],input[type="password"]{
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #655AFF;
+    margin-bottom: 12px;
+    padding: 8px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  input[type="submit"]{
+    background: #655AFF;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  
+  input[type="submit"]:hover{
+    background:#473FBB;
+  }
+
+.container1{
+    display: none;
+}
+.coloana,.coloana2{
+    position: relative;
+}
+.telefon img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
+.coloana2 {
+    position: relative;
+    font-size: 2rem;
+    margin: 10px 10px;
+    text-align: center;
+    top: 35rem;
+}
+.coloana2 button{
+    font-size: 1.4rem;
+}
+
+
+@media screen and (min-width: 768px) {
+   .telefon,.coloana{
+       display: none;
+   }
+
+    .container1{
+        display: block;
+    }
+    #acasa,#produse,#oferte{
+        padding-top: 5px;
+    }
+
+
 }
 
 
@@ -218,7 +308,7 @@ padding-top: 300px;
 	padding: 10px 0 30px;
 	width: 550px;
 }
-.button {
+.button1 {
 	background-color: #655AFF;
 	border: none;
 	color: white;
@@ -259,6 +349,7 @@ padding-top: 300px;
         width: 125%;
     }
     
-
 }
-
+input[type="button"]{
+    background-color: white;
+}
