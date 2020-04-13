@@ -8,7 +8,7 @@ body{
 .container{
 	background-color: white !important;
 }
-input{
+.row input{
 	 border: none !important;
     border: 2px solid #655AFF !important;
     border-radius: 10px !important;
@@ -18,7 +18,17 @@ input{
 	background-color: #655AFF !important;
 	color: white !important;
 }
-label{
+.row label{
 	font-size: 20px !important;
 	margin-bottom:0.1rem !important;
+}
+
+.right{
+	font-size: 15px !important;
+}
+
+.backAlb{
+	width: 100%;
+	height: 100px;
+	background-color: white;
 }
