@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/styleCosCumparaturi.css">
 
     <title>M&E | Shop</title>
 </head>
 <body>
     <!-- nav -->
- <nav class="navbar">
+    <div class="navbar">
 		<span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
         </span>
         <a href="#" class="logo">M&E</a>
-        <ul class="main-nav" id="js-menu">
+        <ul class="main-nav " id="js-menu">
             <li id="acasa" class="da">
                 <a href="index.html" class="nav-links">Acasa</a>
             </li>
             <li id="produse" class="da">
-                <a href="produse.html" class="nav-links">Produse</a>
+                <a href="#" class="nav-links">Produse</a>
             </li>
             <li id="oferte" class="da">
                 <a href="#" class="nav-links">Oferte</a>
             </li>
-            <li id="meniu" class="right nu"><input type="text" placeholder="     Cauta in magazin..."></li> 
-            <li class="nav-links"><a href="#"><i class="fas fa-user"></i></a></li>
+            <li id="meniu" class="right nu"><input type="text" placeholder="     Cauta in magazin..."></li>
+              <li class="nav-links"><a href="#" ><i class="fas fa-user button toggle-login"></i></a></li>
+              <div class="login">
+                <div class="triangle"></div><!-- .triangle -->
+                <form>
+                  <div class="field-title">Nume:</div><!-- .field-title -->
+                  <input type="email" placeholder="Nume de utilizator" />
+                  <div class="field-title">Parola:</div><!-- .field-title -->
+                  <input type="password" placeholder="**********" />
+                  <input type="submit" value="Login" />
+                  <input type="submit" value="Register" />
+                </form>
+              </div>
             <li  class="nav-links"><a href="#"><i class="fas fa-shopping-basket"></i></a></li>
         </ul>
-</nav>
+      </div>
 <!-- ./nav -->
 
 <!-- cos cumparaturi -->
@@ -116,4 +127,6 @@
 </body>
 <script src="./js files/wrap.js"></script>
 <script src="./js files/cantitate.js"></script>
+<script src="./js files/login.js"></script>
+
 </html>
