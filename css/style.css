@@ -252,13 +252,14 @@ body {
 }
 .telefon img{
     position: absolute;
+    top: 30px;
     left: 0;
     right: 0;
     margin: auto;
     width: 100%;
 }
 .coloana2 {
-    position: relative;
+    position: absolute;
     font-size: 2rem;
     margin: 10px 10px;
     text-align: center;
