@@ -187,11 +187,11 @@ body {
     .login{
         left: 0;
         right: 0;
-        top: 160px;
+        top: 145px;
         margin: 50px auto;
     }
     .triangle{
-        margin-left: 120px;
+        margin-left: 123px;
       }
 }
 @media screen and (min-width: 1000px) {
@@ -250,6 +250,7 @@ body {
 .coloana,.coloana2{
     position: relative;
 }
+
 .telefon img{
     position: absolute;
     top: 30px;
