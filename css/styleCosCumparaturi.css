@@ -191,8 +191,11 @@ label {
 
 /* Make adjustments for tablet */
 @media screen and (max-width: 650px) {
+  .containerCos{
+    margin:unset;
+  }
   .containerCos h1{
-    padding: 35px 0px 30px;
+    padding: 55px 0px 10px;
     font-size: 1.5rem;
   }
   .shopping-cart {
@@ -434,16 +437,17 @@ body {
     width: 300px;
     z-index: 6;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 460px) {
     .login{
-        left: 0;
-        right: 0;
-        top: 160px;
-        margin: 50px auto;
+      left: 0;
+      right: 0;
+      top: 145px;
+      margin: 50px auto;
+  }
+  .triangle{
+      margin-left: 118px;
     }
-    .triangle{
-        margin-left: 120px;
-      }
+    
 }
 @media screen and (min-width: 1000px) {
     
