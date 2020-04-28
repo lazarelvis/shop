@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/styleshop.css">
+    <link rel="stylesheet" type="text/css" href="css/styleshop.css?v=<?php echo time(); ?>">
     <title>M&E | Shop </title>
   </head>
   <body>
+  <h1>ceva</h1>
     <div class="navbar">
 		<span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>

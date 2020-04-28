@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styleoferte.css">
+    <link rel="stylesheet" type="text/css" href="css/styleoferte.css?v=<?php echo time(); ?>">
 
     <title>M&E | Oferte</title>
 
@@ -196,10 +196,10 @@
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-md-3 mb-md-0 mb-3">
-        <h5 class="text-uppercase pb-2">&ensp;&nbsp;Acasa</h6>
-        <h5 class="text-uppercase pb-2">Produse</h6>
-        <h5 class="px-1 text-uppercase pb-2">&nbsp;Oferte</h6>
-        <h5 class="px-2 text-uppercase pb-2">&nbsp;&nbsp;Cont</h6>
+        <h5 class="text-uppercase pb-2">&ensp;&nbsp;Acasa</h5>
+        <h5 class="text-uppercase pb-2">Produse</h5>
+        <h5 class="px-1 text-uppercase pb-2">&nbsp;Oferte</h5>
+        <h5 class="px-2 text-uppercase pb-2">&nbsp;&nbsp;Cont</h5>
       </div>
       <div class="col-md-3 mb-md-0 mb-3">
         <h5 class="text-center">Sediu Str Folorilor nr. 25<br/>

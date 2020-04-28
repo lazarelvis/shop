@@ -19,6 +19,9 @@
     padding: 0;
     margin: 0;
 }
+h1{
+    color: blue;
+}
 .navbar a{
     text-decoration: none;
 }

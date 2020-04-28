@@ -10,7 +10,7 @@ require "include/dbh.inc.php";
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=<?php echo time(); ?>">
     <title>M&E | Shop</title>
 </head>
 <body>
@@ -45,6 +45,7 @@ require "include/dbh.inc.php";
             <li  class="nav-links"><a href="cosCumparaturi.html"><i class="fas fa-shopping-basket"></i></a></li>
         </ul>
       </div>
+
     <div class="container1">
         <div class="row">
         <div class="column1">

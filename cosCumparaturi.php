@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/styleCosCumparaturi.css">
+    <link rel="stylesheet" type="text/css" href="css/styleCosCumparaturi.css?v=<?php echo time(); ?>">
 
     <title>M&E | Shop</title>
 </head>
