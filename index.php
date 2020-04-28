@@ -1,3 +1,7 @@
+<?php
+require "includes/dbh.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
