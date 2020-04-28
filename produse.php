@@ -10,7 +10,6 @@
     <title>M&E | Shop </title>
   </head>
   <body>
-  <h1>ceva</h1>
     <div class="navbar">
 		<span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
