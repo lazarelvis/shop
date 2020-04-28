@@ -1,5 +1,5 @@
 <?php
-require "includes/dbh.inc.php";
+require "include/dbh.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
