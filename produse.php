@@ -14,7 +14,7 @@
   <?php
   require "navbar.php";
   ?>
-  -<div class="container mt-5">
+  <div class="container mt-5">
       <div class="containar2">
           <div class="row row-cols-1 row-cols-md-3">
               <?php
