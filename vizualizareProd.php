@@ -83,7 +83,7 @@
                 <h5 class="pt-5 pb-2">Pret</h5>
                 <h3 class="pb-2 font-weight-normal">89.99 LEI</h3>
                 <form>
-                    <button type="button" class="btn btn-primary mt-4 rounded"><i class="fas fa-plus-circle pr-3"></i>ADAUGA</button>
+                    <button type="button" class="btn btn-primary mt-4 rounded"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</button>
                 </form>
             </div> 
         </div>
