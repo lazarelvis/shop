@@ -1,3 +1,5 @@
+<?php require "include/produse.inc.php"; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,346 +44,35 @@
         </ul>
       </div>
 
-  <div class="container mt-5">
-    <div class="containar2">  
-    <div class="row row-cols-1 row-cols-md-3">
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top mh-75" src="img/img12.jpg"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+<div class="container mt-5">
+    <div class="containar2">
+      <div class="row row-cols-1 row-cols-md-3">
+        <?php
+        foreach ($array as $item) {
+            ?>
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="view overlay">
+                        <img class="card-img-top mh-75" src="./upload/<?php echo  $item['imagine'];?>"
+                             alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
+                        <p class="card-text"><?php echo $item["pret"];?> lei</p>
+                    </div>
+                </div>
             </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="img/img12.jpg"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="img/img12.jpg"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-
-    
-            <!--Card content-->
-            <div class="card-body">
-      
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-purple btn-md">Read more</button>
-      
-            </div>
-      
-          </div>
-          <!-- Card -->
-          
-        </div>
+            <?php
+            }
+        ?>
       </div>
-
+    </div>
 </div>
 </div>
 
-</div>
     <script src="./js files/wrap.js"></script>
     <script src="./js files/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
