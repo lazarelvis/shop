@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <body>
 <div class="backAlb">
@@ -16,16 +19,29 @@
             <li id="oferte" class="da">
                 <a href="oferte.php" class="nav-links">Oferte</a>
             </li>
+            <li id="oferte" class="da">
+            </li>
+            <?php
+            if (isset($_SESSION['idUtilizator'])){ ?>
+                <a href="oferte.php" class="nav-links"><?php echo $_SESSION['idUsername']?></a>
+            <?php } else{ ?>
+                <a href="oferte.php" class="nav-links">Username</a>
+            <?php } ?>
             <li id="meniu" class="right nu"><input type="text" placeholder="     Cauta in magazin..."></li>
             <li class="nav-links"><a href="#" ><i class="fas fa-user button toggle-login"></i></a></li>
             <div class="login">
                 <div class="triangle"></div><!-- .triangle -->
-                <form>
+                <form action="include/login.inc.php" method="post">
                     <div class="field-title">Nume:</div><!-- .field-title -->
-                    <input type="email" placeholder="Nume de utilizator" />
+                    <input type="text" name="username" placeholder="Nume de utilizator" />
                     <div class="field-title">Parola:</div><!-- .field-title -->
-                    <input type="password" placeholder="**********" />
-                    <input type="submit" value="Login" />
+                    <input type="password" name="password" placeholder="**********" />
+                    <?php
+                    if (isset($_SESSION['idUtilizator'])){ ?>
+                        <a href="include/logout.inc.php"><input type="button" value="LogOut" /></a>
+                    <?php } else{ ?>
+                        <input type="submit" name="login" value="Login"/>
+                    <?php } ?>
                     <a href="inregistrare.php"><input type="button" value="Register" /></a>
                 </form>
             </div>
