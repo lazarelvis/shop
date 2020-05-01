@@ -41,8 +41,8 @@ session_start();
                         <a href="include/logout.inc.php"><input type="button" value="LogOut" /></a>
                     <?php } else{ ?>
                         <input type="submit" name="login" value="Login"/>
+                        <a href="inregistrare.php"><input type="button" value="Register" /></a>
                     <?php } ?>
-                    <a href="inregistrare.php"><input type="button" value="Register" /></a>
                 </form>
             </div>
             <li  class="nav-links"><a href="cosCumparaturi.php"><i class="fas fa-shopping-basket"></i></a></li>
