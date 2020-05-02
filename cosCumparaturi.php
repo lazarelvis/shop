@@ -23,8 +23,8 @@ require "navbar.php";
     <div class="column-labels">
         <label class="product-image">Image</label>
         <label class="product-details">Product</label>
-        <label class="product-price">Price</label>
-        <label class="product-quantity">Quantity</label>
+        <label class="product-price">Pret</label>
+        <label class="product-quantity">Cantitate</label>
         <label class="product-removal">Remove</label>
         <label class="product-line-price">Total</label>
     </div>
@@ -44,9 +44,8 @@ require "navbar.php";
         <input type="number" value="1" min="1">
         </div>
         <div class="product-removal">
-        <button class="remove-product">
-            Remove
-        </button>
+            <a href="include/delete.inc.php?delete=<?php echo $item['id_produse']?>">
+                <button class="remove-product">Sterge</button></a>
         </div>
         <div class="product-line-price"><?php echo $item["pret"];?> </div>
     </div>
@@ -55,19 +54,61 @@ require "navbar.php";
     <div class="totals">
         <div class="totals-item">
         <label>Subtotal</label>
-        <div class="totals-value" id="cart-subtotal">71.97</div>
+        <div class="totals-value" id="cart-subtotal">
+            <?php
+            $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
+            $result = mysqli_query($conn,$sql1);
+            $resultCheck = mysqli_num_rows($result);
+
+            while ($row = mysqli_fetch_assoc($result)){
+                if (!is_null($row['pret'])) {
+                    echo $row['pret'];
+                }else{
+                    echo "0";
+                }
+            }
+            ?>
+        </div>
         </div>
         <div class="totals-item">
         <label>Tax (5%)</label>
-        <div class="totals-value" id="cart-tax">3.60</div>
+        <div class="totals-value" id="cart-tax">
+            <?php
+            $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
+            $result = mysqli_query($conn,$sql1);
+            $resultCheck = mysqli_num_rows($result);
+
+            while ($row = mysqli_fetch_assoc($result)){
+                if (!is_null($row['pret'])) {
+                    echo(5/100*$row['pret']);
+                }else{
+                    echo "0";
+                }
+            }
+            ?>
+        </div>
         </div>
         <div class="totals-item">
         <label>Shipping</label>
-        <div class="totals-value" id="cart-shipping">15.00</div>
+        <div class="totals-value" id="cart-shipping">15.00 </div>
         </div>
         <div class="totals-item totals-item-total">
         <label>Grand Total</label>
-        <div class="totals-value" id="cart-total">90.57</div>
+        <div class="totals-value" id="cart-total">
+            <?php
+            $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
+            $result = mysqli_query($conn,$sql1);
+            $resultCheck = mysqli_num_rows($result);
+
+            while ($row = mysqli_fetch_assoc($result)){
+                if (!is_null($row['pret'])) {
+                    echo $row['pret']+15+(5/100*$row['pret']);
+                }else{
+                    echo "0";
+                }
+            }
+            ?>
+        </div>
         </div>
     </div>
 

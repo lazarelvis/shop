@@ -4,9 +4,6 @@ var shippingRate = 15.00;
 var fadeTime = 300;
 /* Assign actions */
 
-$('.nav-links').change( function() {
-  updateQuantity(this);
-});
 
 $('.product-quantity input').change( function() {
   updateQuantity(this);
