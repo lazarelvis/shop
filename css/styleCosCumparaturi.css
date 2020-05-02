@@ -88,8 +88,8 @@
 
 /* Apply clearfix in a few places */
 /* Apply dollar signs */
-.product .product-price:before, .product .product-line-price:before, .totals-value:before {
-  content: '$';
+.product .product-price:after, .product .product-line-price:after, .totals-value:after {
+  content: 'LEI';
 }
 
 /* Body/Header stuff */

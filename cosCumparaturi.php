@@ -1,3 +1,4 @@
+<?php require "include/cosProduse.inc.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,36 +28,18 @@ require "navbar.php";
         <label class="product-removal">Remove</label>
         <label class="product-line-price">Total</label>
     </div>
-
+        <?php
+        foreach ($array as $item) {
+        ?>
     <div class="product">
         <div class="product-image">
         <img src="./img/img11.jpg">
         </div>
         <div class="product-details">
-        <div class="product-title">Dingo Dog Bones</div>
-        <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+        <div class="product-title"><?php echo $item["denumire"];?></div>
+        <p class="product-description"><?php echo $item["caracteristici"];?></p>
         </div>
-        <div class="product-price">12.99</div>
-        <div class="product-quantity">
-        <input type="number" value="2" min="1">
-        </div>
-        <div class="product-removal">
-        <button class="remove-product">
-            Remove
-        </button>
-        </div>
-        <div class="product-line-price">25.98</div>
-    </div>
-
-    <div class="product">
-        <div class="product-image">
-        <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
-        </div>
-        <div class="product-details">
-        <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-        <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
-        </div>
-        <div class="product-price">45.99</div>
+        <div class="product-price"><?php echo $item["pret"];?> </div>
         <div class="product-quantity">
         <input type="number" value="1" min="1">
         </div>
@@ -65,8 +48,9 @@ require "navbar.php";
             Remove
         </button>
         </div>
-        <div class="product-line-price">45.99</div>
+        <div class="product-line-price"><?php echo $item["pret"];?> </div>
     </div>
+<?php } ?>
 
     <div class="totals">
         <div class="totals-item">

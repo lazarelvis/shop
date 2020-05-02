@@ -32,6 +32,9 @@
                           <div class="card-body text-center">
                               <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
                               <p class="card-text"><?php echo $item["pret"];?> lei</p>
+                              <form action="" method="POST">
+                                  <a class="btn btn-primary" href="include/cos.inc.php?id_prod=<?php echo $item['id_produse']; ?>">Adauga in cos</a>
+                              </form>
                           </div>
                       </div>
                   </div>
