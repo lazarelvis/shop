@@ -33,7 +33,7 @@ require "navbar.php";
         ?>
     <div class="product">
         <div class="product-image">
-        <img src="./img/img11.jpg">
+        <img src="./upload/<?php echo  $item['imagine'];?>">
         </div>
         <div class="product-details">
         <div class="product-title"><?php echo $item["denumire"];?></div>
