@@ -1,5 +1,6 @@
 
 <?php require "include/cosProduse.inc.php"; ?>
+
 <?php
 include "include/dbh.inc.php";
 if (isset($_SESSION['idUtilizator'])) {
@@ -89,7 +90,7 @@ require "navbar.php";
 ?>
 <!-- RADIO BUTON -->
 <div class="container mt-5">
-    <form>
+    <form  novalidate="" action="include/checkout.inc.php" method="post">
         <div class="shadow  mb-5 bg-white rounded radiosection">
             <div class="radiosection p-4">
                 <div id="circle">
@@ -97,11 +98,11 @@ require "navbar.php";
                 </div>
                 <h3 class="ml-5" >Modalitate de livrare:</h3>
                 <div class="custom-control  ml-4 pt-2 custom-radio radio1">
-                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                    <input type="radio" id="customRadio1" name="customRadio" value="Easy_Box" class="custom-control-input">
                     <label class="custom-control-label " for="customRadio1">Easy BOX</label>
                 </div>
                 <div class="custom-control ml-4 pt-2 custom-radio radio2">
-                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <input type="radio" id="customRadio2" name="customRadio" value="Fan_Courier" class="custom-control-input">
                     <label class="custom-control-label" for="customRadio2">FAN Courier</label>
                 </div>
             </div>
@@ -110,48 +111,48 @@ require "navbar.php";
         <div class="shadow  mb-5 bg-white rounded radiosection">
             <div class="radiosection p-4">
                 <div id="circle"><h5>2</h5></div><h3 class="ml-5">Date personale:</h3>
-                <form class="datep">
+                <div class="datep">
                     <div class="form-row pb-3 pt-3">
                         <div class="col pl-2 pr-3">
                             <?php
                             if (isset($_SESSION['idUtilizator'])){ ?>
-                            <input type="text" class="form-control" placeholder="Nume" value="<?php echo $_SESSION['nume']?>">
+                            <input type="text" class="form-control" name="nume" placeholder="Nume" value="<?php echo $_SESSION['nume']?>">
                             <?php }else{ ?>
-                            <input type="text" class="form-control" placeholder="Nume">
+                            <input type="text" class="form-control" name="nume" placeholder="Nume">
                             <?php } ?>
 
                         </div>
                         <div class="col  pl-2 pr-3">
                             <?php
                             if (isset($_SESSION['idUtilizator'])){ ?>
-                            <input type="text" class="form-control" placeholder="Prenume" value="<?php echo $_SESSION['prenume']?>">
+                            <input type="text" class="form-control" name="prenume" placeholder="Prenume" value="<?php echo $_SESSION['prenume']?>">
                             <?php }else{ ?>
-                            <input type="text" class="form-control" placeholder="Prenume">
+                            <input type="text" class="form-control" name="prenume" placeholder="Prenume">
                             <?php } ?>
                         </div>
                     </div>
                     <div class="form-row pb-3 pt-3">
                         <div class="col  pl-2 pr-3">
-                            <input type="text" class="form-control" placeholder="Tara,Judet">
+                            <input type="text" class="form-control" name="judet" placeholder="Tara,Judet">
                         </div>
                         <div class="col  pl-2 pr-3">
-                            <input type="text" class="form-control" placeholder="Adresa">
+                            <input type="text" class="form-control" name="adresa" placeholder="Adresa">
                         </div>
                     </div>
                     <div class="form-row pb-3 pt-3">
                         <div class="col  pl-2 pr-3">
                         <?php
                         if (isset($_SESSION['idUtilizator'])){ ?>
-                            <input type="text" class="form-control" placeholder="Email" value="<?php echo $_SESSION['email']?>">
+                            <input type="text" class="form-control"  name="email" placeholder="Email" value="<?php echo $_SESSION['email']?>">
                         <?php }else{ ?>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control"  name="email" placeholder="Email">
                         <?php } ?>
                         </div>
                         <div class="col  pl-2 pr-3">
-                            <input type="text" class="form-control" placeholder="Numar telefon">
+                            <input type="text" class="form-control" name="telefon" placeholder="Numar telefon">
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -163,11 +164,11 @@ require "navbar.php";
                 </div>
                 <h3 class="ml-5" >Metoda de plata:</h3>
                 <div class="custom-control  ml-4 pt-2 custom-radio radio3">
-                    <input type="radio" id="customRadio1-1" name="customRadio1" class="custom-control-input">
+                    <input type="radio" id="customRadio1-1" name="customRadio1" value="Internet_Banking" class="custom-control-input">
                     <label class="custom-control-label " for="customRadio1-1">Transfer prin internet banking</label>
                 </div>
                 <div class="custom-control ml-4 pt-2 custom-radio radio4">
-                    <input type="radio" id="customRadio1-2" name="customRadio1" class="custom-control-input">
+                    <input type="radio" id="customRadio1-2" name="customRadio1" value="Ramburs" class="custom-control-input">
                     <label class="custom-control-label" for="customRadio1-2">Ramburs la curier</label>
                 </div>
             </div>
@@ -184,20 +185,21 @@ foreach ($array as $item) {
     ?>
         <!-- BUTONUL SI TOTALUL -->
         <div class="pt-2" >
-            <p class="h4 d-inline">TOTAL COMANDA :   <?php
+            <p class="h4 d-inline" >TOTAL COMANDA :   <?php
                 $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
                 $result = mysqli_query($conn,$sql1);
                 $resultCheck = mysqli_num_rows($result);
 
                 while ($row = mysqli_fetch_assoc($result)){
                     if (!is_null($row['pret'])) {
-                        echo $row['pret']+15+(5/100*$row['pret']);
+                        $a= $row['pret']+15+(5/100*$row['pret']);
+                        echo $a;
                     }else{
                         echo "0";
                     }
                 }
                 ?> LEI</p>
-            <button class="btn btn-primary d-inline float-right mb-5" type="submit"><h4>Trimite comanda</h4></button>
+            <button class="btn btn-primary d-inline float-right mb-5" name="checkout" type="submit" ><h4>Trimite comanda</h4></button>
         </div>
     </form>
 </div>
