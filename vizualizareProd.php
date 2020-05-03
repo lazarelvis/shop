@@ -1,3 +1,5 @@
+<?php require "include/vizualizareProdus.inc.php"; ?>
+<?php require "include/test.inc.php"; ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,32 +63,37 @@
   ?>
 
   <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12 clearfix pt-5">
-                <img class="img-fluid border border-secondary " src="./img/viz2.png">
-            </div>
-            <div class="col-lg-6 col-md-4 col-sm-5 col-xs-12 px-5 pt-5">
-                <h2 class="text-left font-weight-normal mb-4">Tricou de vara M&E</h2>
-                <h5 class="pb-2">Caracteristici</h5>
-                <div style="font-size: 16px;">
-                    <p class="mb-1">Culoare: negru</p>
-                    <p class="mb-1">Material: bumbac</p>
-                    <p>Stil: casual office</p>
-                </div>
-                <h5 class="pb-2 pt-3">Masura</h5>
-                <form>  
-                    <button type="button" class="btn btn-outline-primary">S</button>
-                    <button type="button" class="btn btn-outline-primary">M</button>
-                    <button type="button" class="btn btn-outline-primary">L</button>
-                    <button type="button" class="btn btn-outline-primary">XL</button>
-                </form>
-                <h5 class="pt-5 pb-2">Pret</h5>
-                <h3 class="pb-2 font-weight-normal">89.99 LEI</h3>
-                <form>
-                    <button type="button" class="btn btn-primary mt-4 rounded"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</button>
-                </form>
-            </div> 
-        </div>
+
+          <div class="row">
+              <?php
+              foreach ($array as $item) {
+              ?>
+              <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12 clearfix pt-5">
+                  <img class="img-fluid border border-secondary " src="./img/viz2.png">
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-5 col-xs-12 px-5 pt-5">
+                  <h2 class="text-left font-weight-normal mb-4"><?php echo $item["denumire"];?></h2>
+                  <h5 class="pb-2">Caracteristici</h5>
+                  <div style="font-size: 16px;">
+                      <p class="mb-1">Culoare: negru</p>
+                      <p class="mb-1">Material: <?php echo $item["caracteristici"];?></p>
+                      <p>Stil: casual office</p>
+                  </div>
+                  <h5 class="pb-2 pt-3">Masura</h5>
+                  <form>
+                      <button type="button" class="btn btn-outline-primary">S</button>
+                      <button type="button" class="btn btn-outline-primary">M</button>
+                      <button type="button" class="btn btn-outline-primary">L</button>
+                      <button type="button" class="btn btn-outline-primary">XL</button>
+                  </form>
+                  <h5 class="pt-5 pb-2">Pret</h5>
+                  <h3 class="pb-2 font-weight-normal"><?php echo $item["pret"];?> LEI</h3>
+                  <a class="btn btn-primary" href="include/cos.inc.php?id_prod=<?php echo $item['id_produse']; ?>"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</a>
+              </div>
+                  <?php
+              }
+              ?>
+          </div>
       </div>
 
     <!-- Optional JavaScript -->

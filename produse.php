@@ -34,6 +34,7 @@
                               <p class="card-text"><?php echo $item["pret"];?> lei</p>
                               <form action="" method="POST">
                                   <a class="btn btn-primary" href="include/cos.inc.php?id_prod=<?php echo $item['id_produse']; ?>">Adauga in cos</a>
+                                  <a class="btn btn-primary" href="vizualizareProd.php?id_prod=<?php echo $item['id_produse']?>">Vizualizeaza produs</a>
                               </form>
                           </div>
                       </div>
