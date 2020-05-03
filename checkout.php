@@ -115,14 +115,19 @@ require "navbar.php";
                         <div class="col pl-2 pr-3">
                             <?php
                             if (isset($_SESSION['idUtilizator'])){ ?>
-                            <input type="text" class="form-control" placeholder="Nume" value="<?php echo $_SESSION['idUsername']?>">
+                            <input type="text" class="form-control" placeholder="Nume" value="<?php echo $_SESSION['nume']?>">
                             <?php }else{ ?>
                             <input type="text" class="form-control" placeholder="Nume">
                             <?php } ?>
 
                         </div>
                         <div class="col  pl-2 pr-3">
+                            <?php
+                            if (isset($_SESSION['idUtilizator'])){ ?>
+                            <input type="text" class="form-control" placeholder="Prenume" value="<?php echo $_SESSION['prenume']?>">
+                            <?php }else{ ?>
                             <input type="text" class="form-control" placeholder="Prenume">
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="form-row pb-3 pt-3">
@@ -135,7 +140,12 @@ require "navbar.php";
                     </div>
                     <div class="form-row pb-3 pt-3">
                         <div class="col  pl-2 pr-3">
+                        <?php
+                        if (isset($_SESSION['idUtilizator'])){ ?>
+                            <input type="text" class="form-control" placeholder="Email" value="<?php echo $_SESSION['email']?>">
+                        <?php }else{ ?>
                             <input type="text" class="form-control" placeholder="Email">
+                        <?php } ?>
                         </div>
                         <div class="col  pl-2 pr-3">
                             <input type="text" class="form-control" placeholder="Numar telefon">
