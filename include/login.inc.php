@@ -28,6 +28,9 @@ if (isset($_POST['login'])) {
                     session_start();
                     $_SESSION['idUtilizator'] = $row['id_utilizator'];
                     $_SESSION['idUsername'] = $row['username'];
+                    $_SESSION['nume'] = $row['nume'];
+                    $_SESSION['prenume'] = $row['prenume'];
+                    $_SESSION['email'] = $row['email'];
 
                     header("Location: ../index.php?login=success");
                     exit();

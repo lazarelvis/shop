@@ -1,4 +1,23 @@
-<!doctype html>
+
+<?php require "include/cosProduse.inc.php"; ?>
+<?php
+include "include/dbh.inc.php";
+if (isset($_SESSION['idUtilizator'])) {
+    $array = array();
+    $sql = "SELECT * FROM utilizatori WHERE id_utilizator=" . $_SESSION['idUtilizator'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+    }
+
+}
+
+    ?>
+    <!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -94,7 +113,13 @@ require "navbar.php";
                 <form class="datep">
                     <div class="form-row pb-3 pt-3">
                         <div class="col pl-2 pr-3">
+                            <?php
+                            if (isset($_SESSION['idUtilizator'])){ ?>
+                            <input type="text" class="form-control" placeholder="Nume" value="<?php echo $_SESSION['idUsername']?>">
+                            <?php }else{ ?>
                             <input type="text" class="form-control" placeholder="Nume">
+                            <?php } ?>
+
                         </div>
                         <div class="col  pl-2 pr-3">
                             <input type="text" class="form-control" placeholder="Prenume">
@@ -119,6 +144,7 @@ require "navbar.php";
                 </form>
             </div>
         </div>
+
         <!-- metoda de plata -->
         <div class="shadow  mb-5 bg-white rounded radiosection">
             <div class="radiosection p-4">
@@ -137,14 +163,30 @@ require "navbar.php";
             </div>
         </div>
         <!-- TEXTUL -->
-        <div class="produse">
-            <p class="h5">10X tricou M&E model vara (Marimea S) : 550 lei </p>
-            <p class="h5">15X tricou M&E model toamna (Marimea S) : 650 lei </p>
-            <p class="h5">20X tricou M&E model iarna (Marimea S) :  750 lei</p>
-        </div>
+<?php
+foreach ($array as $item) {
+    ?>
+    <div class="produse">
+        <p class="h5"><?php echo $item["denumire"];?> <?php echo $item["caracteristici"];?>: <?php echo $item["pret"];?> LEI</p>
+    </div>
+    <?php
+}
+    ?>
         <!-- BUTONUL SI TOTALUL -->
         <div class="pt-2" >
-            <p class="h4 d-inline">TOTAL COMANDA : 1.950.000 lei </p>
+            <p class="h4 d-inline">TOTAL COMANDA :   <?php
+                $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
+                $result = mysqli_query($conn,$sql1);
+                $resultCheck = mysqli_num_rows($result);
+
+                while ($row = mysqli_fetch_assoc($result)){
+                    if (!is_null($row['pret'])) {
+                        echo $row['pret']+15+(5/100*$row['pret']);
+                    }else{
+                        echo "0";
+                    }
+                }
+                ?> LEI</p>
             <button class="btn btn-primary d-inline float-right mb-5" type="submit"><h4>Trimite comanda</h4></button>
         </div>
     </form>
