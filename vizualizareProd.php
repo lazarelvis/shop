@@ -80,15 +80,28 @@
                       <p>Stil: casual office</p>
                   </div>
                   <h5 class="pb-2 pt-3">Masura</h5>
-                  <form>
-                      <button type="button" class="btn btn-outline-primary">S</button>
-                      <button type="button" class="btn btn-outline-primary">M</button>
-                      <button type="button" class="btn btn-outline-primary">L</button>
-                      <button type="button" class="btn btn-outline-primary">XL</button>
+                  <form novalidate="" action="include/cos.inc.php?id_prod=<?php echo $item["id_produse"];?>" method="post">
+                      <div class="custom-control  ml-4 pt-2 custom-radio radio1">
+                      <input type="radio" id="marime" name="marime" value="S" class="custom-control-input"checked>
+                      <label class="custom-control-label " for="marime"> <- S</label>
+                      </div>
+                      <div class="custom-control  ml-4 pt-2 custom-radio radio1">
+                      <input type="radio" id="marime1" name="marime" value="M" class="custom-control-input">
+                      <label class="custom-control-label " for="marime1"> <- M</label>
+                      </div>
+                      <div class="custom-control  ml-4 pt-2 custom-radio radio1">
+                      <input type="radio" id="marime2" name="marime" value="L" class="custom-control-input">
+                      <label class="custom-control-label " for="marime2"> <- L</label>
+                      </div>
+                      <div class="custom-control  ml-4 pt-2 custom-radio radio1">
+                      <input type="radio" id="marime3" name="marime" value="XL" class="custom-control-input">
+                      <label class="custom-control-label " for="marime3"> <- XL</label>
+                      </div>
+                      <button class="btn btn-primary" type="submit" name="cos"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</button>
+
                   </form>
                   <h5 class="pt-5 pb-2">Pret</h5>
                   <h3 class="pb-2 font-weight-normal"><?php echo $item["pret"];?> LEI</h3>
-                  <a class="btn btn-primary" href="include/cos.inc.php?id_prod=<?php echo $item['id_produse']; ?>"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</a>
               </div>
                   <?php
               }

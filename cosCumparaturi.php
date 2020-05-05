@@ -87,7 +87,7 @@
         <img src="./upload/<?php echo  $item['imagine'];?>">
         </div>
         <div class="product-details">
-        <div class="product-title"><?php echo $item["denumire"];?> (Masura <?php echo $item["masura"];?>)</div>
+        <div class="product-title"><?php echo $item["denumire"];?> ( Marimea <?php echo $item["marime"];?>) </div>
         <p class="product-description"><?php echo $item["caracteristici"];?></p>
         </div>
         <div class="product-price"><?php echo $item["pret"];?> </div>
