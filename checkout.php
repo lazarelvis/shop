@@ -174,27 +174,30 @@ require "navbar.php";
             </div>
         </div>
         <!-- TEXTUL -->
+
+
 <?php
 foreach ($array as $item) {
     ?>
     <div class="produse">
-        <p class="h5"><?php echo $item["denumire"];?> <?php echo $item["caracteristici"];?>: <?php echo $item["pret"];?> LEI</p>
+        <p class="h5"><?php echo $item["denumire"]; ?> <?php echo $item["caracteristici"]; ?>
+            : <?php echo $item["pret"]; ?> LEI</p>
     </div>
     <?php
 }
-    ?>
+?>
         <!-- BUTONUL SI TOTALUL -->
-        <div class="pt-2" >
-            <p class="h4 d-inline" >TOTAL COMANDA :   <?php
+        <div class="pt-2">
+            <p class="h4 d-inline">TOTAL COMANDA : <?php
                 $sql1 = "SELECT SUM(pret) as pret FROM cos,produse WHERE cos.id_produse=produse.id_produse";
-                $result = mysqli_query($conn,$sql1);
+                $result = mysqli_query($conn, $sql1);
                 $resultCheck = mysqli_num_rows($result);
 
-                while ($row = mysqli_fetch_assoc($result)){
+                while ($row = mysqli_fetch_assoc($result)) {
                     if (!is_null($row['pret'])) {
-                        $a= $row['pret']+15+(5/100*$row['pret']);
+                        $a = $row['pret'] + 15 + (5 / 100 * $row['pret']);
                         echo $a;
-                    }else{
+                    } else {
                         echo "0";
                     }
                 }
