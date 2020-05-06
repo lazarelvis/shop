@@ -19,7 +19,7 @@ if (isset($_POST['checkout'])) {
     $resultCheck = mysqli_num_rows($result1);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result1)) {
-            $produse.=$row['denumire']."  ";
+            $produse.=$row['denumire']." ( ".$row['marime']." ) ";
         }
     }
     $nume = $_POST['nume'];
