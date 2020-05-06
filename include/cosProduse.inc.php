@@ -4,7 +4,7 @@ session_start();
 if (isset( $_SESSION['idUtilizator'])) {
     $id_user = $_SESSION['idUtilizator'];
     $array = array();
-    $sql = "SELECT * FROM cos,produse WHERE cos.id_produse=produse.id_produse AND id_utilizator=" . $id_user;
+    $sql = "SELECT * FROM cos,produse WHERE cos.id_produse=produse.id_produse AND id_utilizator=". $id_user;
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
