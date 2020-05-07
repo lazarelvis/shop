@@ -267,8 +267,8 @@ body {
     margin-bottom: 3px;
 }
 
-.logout input:hover{
-    background:#473FBB;
+.logout:hover{
+    background:#473FBB!important;
 }
 .nume{
     text-align: center;
