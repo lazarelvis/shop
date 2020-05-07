@@ -53,7 +53,7 @@ require "navbar.php";
 
         <div class="mb-3">
           <label for="address">Parola:</label>
-          <input type="text" class="form-control" name="password" id="address" placeholder="123456" required="">
+          <input type="password" class="form-control" name="password" id="address" placeholder="123456" required="">
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -61,7 +61,7 @@ require "navbar.php";
 
         <div class="mb-3">
           <label for="address2">Confirmati prola:</label>
-          <input type="text" class="form-control" name="password-conf" id="address2" placeholder="123456">
+          <input type="password" class="form-control" name="password-conf" id="address2" placeholder="123456">
         </div>
 
 

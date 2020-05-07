@@ -261,8 +261,7 @@ body {
     border: 2px solid #655AFF;
     margin-bottom: 12px;
     padding: 8px;
-    width: 80%;
-    text-align: center;
+    width: 100%;
   }
   
   input[type="submit"]{

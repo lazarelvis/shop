@@ -11,9 +11,10 @@
     <link rel="stylesheet" type="text/css" href="css/styleshop.css?v=<?php echo time(); ?>">
     <title>M&E | Shop </title>
   </head>
-  <?php
-  require "navbar.php";
-  ?>
+      <?php
+      require "navbar.php";
+      ?>
+
   <div class="container mt-5">
       <div class="containar2">
           <div class="row row-cols-1 row-cols-md-3">
