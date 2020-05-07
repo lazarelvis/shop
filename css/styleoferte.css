@@ -262,3 +262,19 @@ body {
 .nume{
     text-align: center;
 }
+
+@media screen and (max-width: 1544px) {
+    .navbar{
+        margin:0 150px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .navbar{
+        margin:0 100px;
+    }
+}
+@media screen and (max-width: 732px) {
+    .navbar{
+        margin:0;
+    }
+}

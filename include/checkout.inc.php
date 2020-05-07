@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_POST['checkout'])) {
     require "dbh.inc.php";
@@ -39,8 +40,19 @@ if (isset($_POST['checkout'])) {
     }
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
-    header("Location: ../index.php?comanda=success");
+
+    $id_user = $_SESSION['idUtilizator'];
+    $sql3 = "DELETE FROM cos WHERE id_utilizator=?";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql3)) {
+        header("Location: ../checkout.php?error=sqlerror");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "i", $id_user);
+    mysqli_stmt_execute($stmt);
+    header("Location: ../index.php?deletedProject=success");
     exit();
+
 } else {
     header("Location: ../index.php?eroare");
     exit();
