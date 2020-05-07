@@ -1,5 +1,9 @@
 <?php require "include/vizualizareProdus.inc.php"; ?>
 <?php require "include/test.inc.php"; ?>
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>

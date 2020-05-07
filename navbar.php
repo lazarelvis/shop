@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <body>
 <div class="backAlb">

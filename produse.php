@@ -1,4 +1,7 @@
 <?php require "include/produse.inc.php"; ?>
+<?php
+session_start();
+?>
 
 <!doctype html>
 <html lang="en">
