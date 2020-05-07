@@ -25,7 +25,7 @@ require "navbar.php";
             <h1>CUMPARA-L.</h1>
             <p>Cumpara cel mai fresh merch
             doar cu un click.</p>
-            <form>
+            <form action="produse.php">
                 <button class="button1">Apasa aici</button>
             </form>
         </div>
