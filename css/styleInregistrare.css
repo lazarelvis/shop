@@ -257,11 +257,11 @@ body {
  
   input[type="email"],input[type="password"]{
     background: #fff;
-    border-radius: 10px;
+    border-radius: 25px;
     border: 2px solid #655AFF;
     margin-bottom: 12px;
     padding: 8px;
-    width: 100%;
+      text-align: center;
   }
   
   input[type="submit"]{
