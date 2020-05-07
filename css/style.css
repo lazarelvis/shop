@@ -225,7 +225,7 @@ body {
     margin-bottom: 12px;
     padding: 8px;
     width: 80%;
-    text-align: center;
+    text-align: center!important;
   }
   
   input[type="submit"]{
@@ -244,6 +244,25 @@ body {
   input[type="submit"]:hover{
     background:#473FBB;
   }
+.logout {
+    background: #655AFF!important;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.logout input:hover{
+    background:#473FBB;
+}
+.nume{
+    text-align: center;
+}
 
 .container1{
     display: none;
