@@ -5,7 +5,7 @@ if (isset($_GET['delete'])) {
     require 'dbh.inc.php';
     $id = $_GET['delete'];
 
-    $sql = "DELETE FROM cos WHERE id_produse=?";
+    $sql = "DELETE FROM cos WHERE id_cos=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../cosCumparaturi.php?error=sqlerror");

@@ -34,15 +34,12 @@ session_start();
                               </a>
                           </div>
                           <div class="card-body text-center">
-                              <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
-                              <p class="card-text"><?php echo $item["pret"];?> lei</p>
+                              <p class="card-text pt-3 font-weight-bold" style="font-size: 22px;color: #4F4F4F;"><?php echo $item["denumire"];?></p>
+                              <p class="card-text" style="font-size: 14px">TRICOURI</p>
+                              <hr>
+                              <p class="card-text pb-2 font-weight-bold" style="font-size: 22px;color: #4F4F4F;"><?php echo $item["pret"];?> lei</p>
                               <form action="" method="POST">
-                                  <?php if  (isset( $_SESSION['idUtilizator'])){?>
-                                      <a class="btn btn-primary" href="include/cos.inc.php?id_prod=<?php echo $item['id_produse']; ?>">Adauga in cos</a>
-                                  <?php }else{ ?>
-                                      <input class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="button" value="Adauga in cos" style="background-color: #655AFF;">
-                                  <?php } ?>
-                                  <a class="btn btn-primary" href="vizualizareProd.php?id_prod=<?php echo $item['id_produse']?>">Vizualizeaza produs</a>
+                                  <a class="btn btn-primary" href="vizualizareProd.php?id_prod=<?php echo $item['id_produse']?>"><i class="far fa-eye" style="color: white; font-size: 16px;padding-right: 10px;"></i>Vizualizeaza produs</a>
                               </form>
                           </div>
                       </div>
@@ -50,26 +47,6 @@ session_start();
                   <?php
               }
               ?>
-          </div>
-      </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Ooops se pare ca nu esti autentificat</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  ...
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Inchide</button>
-              </div>
           </div>
       </div>
   </div>

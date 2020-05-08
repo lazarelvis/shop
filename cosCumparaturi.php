@@ -46,7 +46,7 @@ require "navbar.php";
         <input type="number" value="1" min="1">
         </div>
         <div class="product-removal">
-            <a href="include/delete.inc.php?delete=<?php echo $item['id_produse']?>">
+            <a href="include/delete.inc.php?delete=<?php echo $item['id_cos']?>">
                 <button class="remove-product">Sterge</button></a>
         </div>
         <div class="product-line-price"><?php echo $item["pret"];?> </div>
