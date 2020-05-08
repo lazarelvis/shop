@@ -69,6 +69,17 @@
             border-color: #473FBB;
             background-color:#473FBB ;
         }
+        @media screen and (max-width: 501px) {
+            .float-right {
+                float: unset !important;
+            }
+            .btn-primary{
+                margin: auto;
+            }
+            .centerBtn{
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -163,7 +174,7 @@ require "navbar.php";
         </div>
         <!-- TEXTUL -->
 
-
+<div class="centerBtn">
 <?php
 foreach ($array as $item) {
     ?>
@@ -190,9 +201,10 @@ foreach ($array as $item) {
                     }
                 }
                 ?> LEI</p>
-            <button class="btn btn-primary d-inline float-right mb-5" name="checkout" type="submit" ><h4>Trimite comanda</h4></button>
+            <button class="btn btn-primary d-inline float-right mb-5 mt-3" name="checkout" type="submit"><h4>Trimite comanda</h4></button>
         </div>
     </form>
+</div>
 </div>
 <?php
 require "footer.php";
