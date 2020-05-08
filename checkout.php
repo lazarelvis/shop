@@ -64,6 +64,11 @@
         .btn-primary h4 {
             color: white;
         }
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            border-color: #473FBB;
+            background-color:#473FBB ;
+        }
     </style>
 </head>
 
@@ -81,7 +86,7 @@ require "navbar.php";
                 </div>
                 <h3 class="ml-5" >Modalitate de livrare:</h3>
                 <div class="custom-control  ml-4 pt-2 custom-radio radio1">
-                    <input type="radio" id="customRadio1" name="customRadio" value="Easy_Box" class="custom-control-input">
+                    <input type="radio" id="customRadio1" name="customRadio" value="Easy_Box" class="custom-control-input" checked>
                     <label class="custom-control-label " for="customRadio1">Easy BOX</label>
                 </div>
                 <div class="custom-control ml-4 pt-2 custom-radio radio2">
@@ -151,7 +156,7 @@ require "navbar.php";
                     <label class="custom-control-label " for="customRadio1-1">Transfer prin internet banking</label>
                 </div>
                 <div class="custom-control ml-4 pt-2 custom-radio radio4">
-                    <input type="radio" id="customRadio1-2" name="customRadio1" value="Ramburs" class="custom-control-input">
+                    <input type="radio" id="customRadio1-2" name="customRadio1" value="Ramburs" class="custom-control-input" checked>
                     <label class="custom-control-label" for="customRadio1-2">Ramburs la curier</label>
                 </div>
             </div>

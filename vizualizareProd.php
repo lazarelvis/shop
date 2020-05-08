@@ -17,7 +17,8 @@ session_start();
 
       <title>M&E | Oferte</title>
     <style>
-
+        .custom-control-label::before{
+            border: 3px solid #655AFF;}
     @font-face{
 	src: url(./fonts/Poppins-Regular.ttf);
 	font-family: poppins-regular;
@@ -59,6 +60,11 @@ session_start();
         box-shadow: inset 0  0 #ddd;
 
     }
+     .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: #473FBB;
+        background-color:#473FBB ;
+     }
       
     </style>
   </head>
@@ -83,8 +89,9 @@ session_start();
                       <p class="mb-1">Material: <?php echo $item["caracteristici"];?></p>
                       <p>Stil: casual office</p>
                   </div>
-                  <h5 class="pb-2 pt-3">Masura</h5>
+                  <h5 class="">Masura</h5>
                   <form novalidate="" action="include/cos.inc.php?id_prod=<?php echo $item["id_produse"];?>" method="post">
+                     <div class="radiosection pb-3">
                       <div class="custom-control  ml-4 pt-2 custom-radio radio1">
                       <input type="radio" id="marime" name="marime" value="S" class="custom-control-input"checked>
                       <label class="custom-control-label " for="marime"> <- S</label>
@@ -101,6 +108,7 @@ session_start();
                       <input type="radio" id="marime3" name="marime" value="XL" class="custom-control-input">
                       <label class="custom-control-label " for="marime3"> <- XL</label>
                       </div>
+                     </div>
                       <button class="btn btn-primary" type="submit" name="cos"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</button>
 
                   </form>
