@@ -209,3 +209,4 @@ foreach ($array as $item) {
 <?php
 require "footer.php";
 ?>
+</html>
