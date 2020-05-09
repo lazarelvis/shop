@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
                     $_SESSION['prenume'] = $row['prenume'];
                     $_SESSION['email'] = $row['email'];
 
-                    header("Location: ../index.php?login=success");
+                    header("Location: ../produse.php?login=success");
                     exit();
                 } else {
                     header("Location: ../index.php?error=wrongpassword");
