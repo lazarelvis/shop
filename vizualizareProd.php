@@ -110,7 +110,14 @@ session_start();
                       </div>
                      </div>
                       <button class="btn btn-primary" type="submit" name="cos"><i class="fas fa-plus-circle pr-3" style="color: white"></i>ADAUGA</button>
-
+                      <?php if (isset($_SESSION['message'])): ?>
+                          <div class="alert alert-<?=$_SESSION['msg_type']?> w-25 position-absolute" style="right: 0; z-index: 200;">
+                              <?php
+                              echo $_SESSION['message'];
+                              unset($_SESSION['message']);
+                              ?>
+                          </div>
+                      <?php endif ?>
                   </form>
                   <h5 class="pt-5 pb-2">Pret</h5>
                   <h3 class="pb-2 font-weight-normal"><?php echo $item["pret"];?> LEI</h3>

@@ -18,7 +18,14 @@ session_start();
 <?php
 require "navbar.php";
 ?>
-
+<?php if (isset($_SESSION['message'])): ?>
+    <div class="alert alert-<?=$_SESSION['msg_type']?> w-25 position-absolute" style="right: 0; z-index: 200;">
+        <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+        ?>
+    </div>
+<?php endif ?>
     <div class="container1">
         <div class="row">
         <div class="column1">

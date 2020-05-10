@@ -14,9 +14,21 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/styleshop.css?v=<?php echo time(); ?>">
     <title>M&E | Shop </title>
   </head>
+  <?php if (isset($_SESSION['message'])): ?>
+      <div class="alert alert-<?=$_SESSION['msg_type']?> w-25 position-absolute" style="right: 0; z-index: 200;">
+          <?php
+          echo $_SESSION['message'];
+          unset($_SESSION['message']);
+          ?>
+      </div>
+  <?php endif ?>
+
       <?php
       require "navbar.php";
+
       ?>
+
+
 
   <div class="container mt-5">
       <div class="containar2">

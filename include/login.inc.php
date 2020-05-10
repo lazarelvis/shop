@@ -32,6 +32,9 @@ if (isset($_POST['login'])) {
                     $_SESSION['prenume'] = $row['prenume'];
                     $_SESSION['email'] = $row['email'];
 
+                    $_SESSION['message'] = "Bine ai venit ".$_SESSION['nume']." ".$_SESSION['prenume'];
+                    $_SESSION['msg_type'] = "success";
+
                     header("Location: ../produse.php?login=success");
                     exit();
                 } else {

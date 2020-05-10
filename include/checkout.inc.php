@@ -50,7 +50,11 @@ if (isset($_POST['checkout'])) {
     }
     mysqli_stmt_bind_param($stmt, "i", $id_user);
     mysqli_stmt_execute($stmt);
-    header("Location: ../index.php?deletedProject=success");
+
+    $_SESSION['message'] = "Comanda efectuata cu success";
+    $_SESSION['msg_type'] = "success";
+
+    header("Location: ../index.php?comanda=success");
     exit();
 
 } else {

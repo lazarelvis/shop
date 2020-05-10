@@ -15,6 +15,8 @@ if (isset($_POST['cos'])) {
         mysqli_stmt_bind_param($stmt, "iis", $id,$id_user,$marime);
         mysqli_stmt_execute($stmt);
     }
+    $_SESSION['message'] = "Produs adaugat în cos";
+    $_SESSION['msg_type'] = "success";
     header("Location: ../produse.php?adaugatCos=success".$id);
     exit();
 }

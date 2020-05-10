@@ -132,20 +132,20 @@ require "navbar.php";
                     </div>
                     <div class="form-row pb-3 pt-3">
                         <div class="col  pl-2 pr-3">
-                            <input type="text" class="form-control" name="judet" placeholder="Tara,Judet">
+                            <?php
+                            if (isset($_SESSION['idUtilizator'])){ ?>
+                                <input type="text" class="form-control"  name="email" placeholder="Email" value="<?php echo $_SESSION['email']?>">
+                            <?php }else{ ?>
+                                <input type="text" class="form-control"  name="email" placeholder="Email">
+                            <?php } ?>
                         </div>
                         <div class="col  pl-2 pr-3">
-                            <input type="text" class="form-control" name="adresa" placeholder="Adresa">
+                            <input type="text" class="form-control" name="judet" placeholder="Tara,Judet">
                         </div>
                     </div>
                     <div class="form-row pb-3 pt-3">
                         <div class="col  pl-2 pr-3">
-                        <?php
-                        if (isset($_SESSION['idUtilizator'])){ ?>
-                            <input type="text" class="form-control"  name="email" placeholder="Email" value="<?php echo $_SESSION['email']?>">
-                        <?php }else{ ?>
-                            <input type="text" class="form-control"  name="email" placeholder="Email">
-                        <?php } ?>
+                            <input type="text" class="form-control" name="adresa" placeholder="Adresa">
                         </div>
                         <div class="col  pl-2 pr-3">
                             <input type="text" class="form-control" name="telefon" placeholder="Numar telefon">
