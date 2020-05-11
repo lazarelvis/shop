@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/f4e72c71dc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="img/favicon.ico" type="image/gif" sizes="16x16">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styleoferte.css?v=<?php echo time(); ?>">
     <title>M&E | Checkout</title>
 
