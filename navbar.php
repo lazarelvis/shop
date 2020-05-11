@@ -27,10 +27,18 @@
             <div class="login">
                 <div class="triangle"></div><!-- .triangle -->
                 <form action="include/login.inc.php" method="post">
-                    <div class="field-title">Nume:</div><!-- .field-title -->
-                    <input class="nume" type="text" name="username" placeholder="Nume de utilizator" />
-                    <div class="field-title">Parola:</div><!-- .field-title -->
-                    <input type="password" name="password" placeholder="**********" />
+                    <?php
+                    if (isset($_SESSION['idUtilizator'])){ ?>
+                        <div class="field-title">Nume:</div><!-- .field-title -->
+                        <input class="nume" type="text" name="username" placeholder="Nume de utilizator" disabled style="background-color: white !important;"/>
+                        <div class="field-title">Parola:</div><!-- .field-title -->
+                        <input type="password" name="password" placeholder="**********" disabled/>
+                    <?php } else{ ?>
+                        <div class="field-title">Nume:</div><!-- .field-title -->
+                        <input class="nume" type="text" name="username" placeholder="Nume de utilizator" />
+                        <div class="field-title">Parola:</div><!-- .field-title -->
+                        <input type="password" name="password" placeholder="**********" />
+                    <?php } ?>
                     <?php
                     if (isset($_SESSION['idUtilizator'])){ ?>
                         <a href="include/logout.inc.php"><input class="logout" type="button" value="LogOut" /></a>

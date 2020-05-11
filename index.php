@@ -14,12 +14,15 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=<?php echo time(); ?>">
     <title>M&E | Shop</title>
+    <style>
+
+    </style>
 </head>
 <?php
 require "navbar.php";
 ?>
 <?php if (isset($_SESSION['message'])): ?>
-    <div class="alert alert-<?=$_SESSION['msg_type']?> w-25 position-absolute" style="right: 0; z-index: 200;">
+    <div class="alert alert-<?=$_SESSION['msg_type']?> w-25 position-absolute" style="">
         <?php
         echo $_SESSION['message'];
         unset($_SESSION['message']);
@@ -57,4 +60,7 @@ require "navbar.php";
 </body>
 <script src="./js files/wrap.js"></script>
 <script src="./js files/login.js"></script>
+<script>
+    $( ".alert" ).fadeOut( 4000 );
+</script>
 </html>

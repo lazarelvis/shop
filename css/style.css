@@ -374,3 +374,14 @@ padding-top: 300px;
 input[type="button"]{
     background-color: white;
 }
+.alert{
+    width: 25%;
+    right: 0;
+    z-index: 200;
+    position: absolute;
+    color: #3D774A;
+    background-color: #D4EDDA;
+    padding: 20px;
+    border-radius: 7px;
+    border: 0.5px solid #C3E6CB;
+}
