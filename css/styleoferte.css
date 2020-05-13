@@ -285,3 +285,8 @@ input[type="email"],input[type="password"]{
         margin:0;
     }
 }
+.reducere{
+    position: absolute;
+    top: -9px;
+    left: -9px;
+}

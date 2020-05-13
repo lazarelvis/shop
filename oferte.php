@@ -53,6 +53,7 @@ session_start();
             <div class="col mb-4">
                   <div class="card">
                     <div class="view overlay">
+                        <img class="reducere" src="./img/reducere1.png" >
                       <img class="card-img-top"src="./upload/<?php echo  $item['imagine'];?>"
                         alt="Card image cap">
                         <a href="#!">
