@@ -262,6 +262,14 @@ input[type="email"],input[type="password"]{
     text-align: center;
 }
 
+.btn-primary {
+    background: #655AFF;
+    border-color: #655AFF;
+}
+.btn-primary:hover{
+    background: #655AFF;
+}
+
 @media screen and (max-width: 1544px) {
     .navbar{
         margin:0 150px;

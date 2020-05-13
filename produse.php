@@ -26,10 +26,7 @@ session_start();
 
       <?php
       require "navbar.php";
-
       ?>
-
-
 
   <div class="container mt-5">
       <div class="containar2">
@@ -48,7 +45,7 @@ session_start();
                           </div>
                           <div class="card-body text-center">
                               <p class="card-text pt-3 font-weight-bold" style="font-size: 22px;color: #4F4F4F;"><?php echo $item["denumire"];?></p>
-                              <p class="card-text" style="font-size: 14px">TRICOURI</p>
+                              <p class="card-text" style="font-size: 14px"><?php echo strtoupper($item["categorie"]);?></p>
                               <hr>
                               <p class="card-text pb-2 font-weight-bold" style="font-size: 22px;color: #4F4F4F;"><?php echo $item["pret"];?> lei</p>
                               <form action="" method="POST">

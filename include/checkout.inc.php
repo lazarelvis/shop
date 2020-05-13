@@ -15,6 +15,7 @@ if (isset($_POST['checkout'])) {
             echo "0";
         }
     }
+
     $sql2 = "SELECT * FROM cos,produse WHERE cos.id_produse=produse.id_produse;";
     $result1 = mysqli_query($conn, $sql2);
     $resultCheck = mysqli_num_rows($result1);
@@ -31,6 +32,12 @@ if (isset($_POST['checkout'])) {
     $adresa = $_POST['adresa'];
     $email = $_POST['email'];
     $telefon = $_POST['telefon'];
+    if (empty($adresa) || empty($telefon)) {
+        $_SESSION['message'] = "A aparut o eroare si nu s-a efectuat comanda!";
+        $_SESSION['msg_type'] = "danger";
+        header("Location: ../index.php?error=emptyfields");
+        exit();
+    }else{
     $sql = "  Insert into comanda(modalitate_Livrare,nume,prenume,judet,adresa,email,metoda_Plata,produse_Comandate,nr_Telefon,total_plata)VALUES ('$modalitate_livrare','$nume','$prenume','$judet','$adresa','$email','$modalitate_plata','$produse','$telefon','$total');
 ";
     $stmt = mysqli_stmt_init($conn);
@@ -56,7 +63,7 @@ if (isset($_POST['checkout'])) {
 
     header("Location: ../index.php?comanda=success");
     exit();
-
+    }
 } else {
     header("Location: ../index.php?eroare");
     exit();

@@ -1,3 +1,4 @@
+<?php require "include/produseSpeciale.inc.php"; ?>
 <?php
 session_start();
 ?>
@@ -45,117 +46,34 @@ session_start();
         
   <div class="container mt-5 pb-5">
     <div class="containar2">  
-    <div class="row row-cols-1 row-cols-md-4">
-        <div class="col mb-3">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top mh-75" src="img/viz1.png"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+        <div class="row row-cols-1 row-cols-md-4">
+            <?php
+            foreach ($array as $item) {
+            ?>
+            <div class="col mb-4">
+                  <div class="card">
+                    <div class="view overlay">
+                      <img class="card-img-top"src="./upload/<?php echo  $item['imagine'];?>"
+                        alt="Card image cap">
+                        <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <div class="card-body text-center">
+                      <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
+                      <p class="card-text"><?php echo $item["pret"];?> lei</p>
+                        <form action="" method="POST">
+                            <a class="btn btn-primary" href="vizualizareProd.php?id_prod="><i class="far fa-eye" style="color: white; font-size: 16px;padding-right: 10px;"></i>Vizualizeaza produs</a>
+                        </form>
+                    </div>
+                  </div>
             </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-          <!-- Card -->
+                <?php
+            }
+            ?>
         </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="img/img1.jpg"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-          <!-- Card -->
-        </div>
-        <div class="col mb-4">
-          <!-- Card -->
-          <div class="card">
-      
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="img/img1.jpg"
-                alt="Card image cap">
-                <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-      
-            <!--Card content-->
-            <div class="card-body text-center">
-      
-              <!--Title-->
-              <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-
-              <!--Text-->
-              <p class="card-text">59 lei</p>
-
-            </div>
-      
-          </div>
-           
-        </div>
-        <div class="col mb-4">
-            <!-- Card -->
-            <div class="card">
-        
-              <!--Card image-->
-              <div class="view overlay">
-                <img class="card-img-top" src="img/img1.jpg"
-                  alt="Card image cap">
-                  <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-        
-              <!--Card content-->
-              <div class="card-body text-center">
-        
-                <!--Title-->
-                <p class="card-text pt-3">TRICOU DE SEZON M&E</p>
-  
-                <!--Text-->
-                <p class="card-text">59 lei</p>
-  
-              </div>
-        
-            </div>
-             
-          </div>
-      </div>
-      </div>
+    </div>
+  </div>
   </div>
 
 <!-- Footer -->

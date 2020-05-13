@@ -385,3 +385,8 @@ input[type="button"]{
     border-radius: 7px;
     border: 0.5px solid #C3E6CB;
 }
+.alert-danger{
+    background-color: #F8D7DA;
+    color: #721C24;
+    border: 0.5px solid #F5C6CB;
+}

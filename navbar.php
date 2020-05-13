@@ -44,7 +44,7 @@
                         <a href="include/logout.inc.php"><input class="logout" type="button" value="LogOut" /></a>
                     <?php } else{ ?>
                         <input type="submit" name="login" value="Login"/>
-                        <a href="inregistrare.php"><input type="button" value="Register" /></a>
+                        <a href="inregistrare.php"><input type="button" value="Register" style="background-color: white !important;"/></a>
                     <?php } ?>
                 </form>
             </div>
