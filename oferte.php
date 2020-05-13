@@ -64,7 +64,7 @@ session_start();
                       <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
                       <p class="card-text"><?php echo $item["pret"];?> lei</p>
                         <form action="" method="POST">
-                            <a class="btn btn-primary" href="vizualizareProd.php?id_prod="><i class="far fa-eye" style="color: white; font-size: 16px;padding-right: 10px;"></i>Vizualizeaza produs</a>
+                            <a class="btn btn-primary" href="vizualizareProd.php?id_prod=<?php echo $item["id_produse"];?>"><i class="far fa-eye" style="color: white; font-size: 16px;padding-right: 10px;"></i>Vizualizeaza produs</a>
                         </form>
                     </div>
                   </div>

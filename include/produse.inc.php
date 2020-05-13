@@ -1,7 +1,7 @@
 <?php
 require "dbh.inc.php";
     $array = array();
-    $sql = "SELECT * FROM produse; ";
+    $sql = "SELECT * FROM produse where special=0; ";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
