@@ -48,6 +48,10 @@
                     <?php } ?>
                 </form>
             </div>
+            <div id="circle" style="width: 18px;right: 20px; height: 18px;-webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;background: #655AFF;
+              position: absolute;" >
+                <h6 style=" position: absolute; color: white; left: 5px;">3</h6>
+            </div>
             <li  class="nav-links"><a href="cosCumparaturi.php"><i class="fas fa-shopping-basket"></i></a></li>
         </ul>
     </div>

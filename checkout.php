@@ -17,7 +17,8 @@
     <style>
         .radiosection{
             background-color:#F6F5FF;
-        } #circle {
+        }
+        #circle {
               width: 31px;
               height: 31px;
               -webkit-border-radius: 25px;
