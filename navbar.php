@@ -48,11 +48,23 @@
                     <?php } ?>
                 </form>
             </div>
-            <div id="circle" style="width: 18px;right: 20px; height: 18px;-webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;background: #655AFF;
-              position: absolute;" >
-                <h6 style=" position: absolute; color: white; left: 5px;">3</h6>
-            </div>
-            <li  class="nav-links"><a href="cosCumparaturi.php"><i class="fas fa-shopping-basket"></i></a></li>
+
+            <li  class="nav-links"><div id="circleCos" class="circlePosition"  >
+                    <h6 style=" position: absolute; color: white; left: 5px; font-weight: normal;">
+                        <?php
+                        $sql1 = "SELECT COUNT(id_produse) as produse FROM cos;";
+                        $result = mysqli_query($conn,$sql1);
+                        $resultCheck = mysqli_num_rows($result);
+                        while ($row = mysqli_fetch_assoc($result)){
+                            if ($row['produse'] != 0) {
+                                echo $row['produse'];
+                            }elseif ($row['produse']==0){
+                                echo "<style> .circlePosition{display: none; }</style>";
+                            }
+                        }
+                        ?>
+                    </h6>
+                </div><a href="cosCumparaturi.php"><i class="fas fa-shopping-basket"></i></a></li>
         </ul>
     </div>
 </div>

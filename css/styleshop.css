@@ -288,3 +288,20 @@ input[type="email"],input[type="password"]{
         margin:0;
     }
 }
+
+#circleCos{
+    width: 20px;
+    height: 20px;
+    background: #655AFF;
+    position: absolute;
+    border-radius: 50%;
+    right: 20px;
+}
+@media screen and (max-width: 501px) {
+    #circleCos{
+        right: 0;
+        left: 40px;
+        margin: 0 auto;
+    }
+}
+
