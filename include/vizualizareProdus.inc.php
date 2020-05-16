@@ -5,7 +5,7 @@ if (isset($_GET['id_prod'])) {
     $id_prod = $_GET['id_prod'];
 
     $array = array();
-    $sql = "SELECT * FROM produse WHERE id_produse=" . $id_prod;
+    $sql = "SELECT * FROM produse,descriere WHERE produse.caracteristici=descriere.id_descriere and id_produse=" . $id_prod;
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 

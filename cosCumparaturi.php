@@ -39,12 +39,16 @@ require "navbar.php";
         <img src="./upload/<?php echo  $item['imagine'];?>">
         </div>
         <div class="product-details">
-        <div class="product-title"><?php echo $item["denumire"];?> ( Marimea <?php echo $item["marime"];?>) </div>
-        <p class="product-description"><?php echo $item["caracteristici"];?></p>
+        <div class="product-title">
+         <h3><?php echo $item["denumire"];?> ( Marimea <?php echo $item["marime"];?>)</h3> </div>
+        <p class="product-description">Culoare: <?php echo $item["culoare"];?></p>
+        <p class="product-description">Material: <?php echo $item["material"];?></p>
+        <p class="product-description">Stil: <?php echo $item["stil"];?></p>
+
         </div>
         <div class="product-price"><?php echo $item["pret"];?> </div>
         <div class="product-quantity">
-        <input type="number" value="1" min="1">
+        <input type="number" value="1" min="1" disabled style="background-color: white">
         </div>
         <div class="product-removal">
             <a href="include/delete.inc.php?delete=<?php echo $item['id_cos']?>">

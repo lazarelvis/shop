@@ -86,9 +86,9 @@ session_start();
                   <h2 class="text-left font-weight-normal mb-4"><?php echo $item["denumire"];?></h2>
                   <h5 class="pb-2">Caracteristici</h5>
                   <div style="font-size: 16px;">
-                      <p class="mb-1">Culoare: negru</p>
-                      <p class="mb-1">Material: <?php echo $item["caracteristici"];?></p>
-                      <p>Stil: casual office</p>
+                      <p class="mb-1">Culoare: <?php echo $item["culoare"];?></p>
+                      <p class="mb-1">Material: <?php echo $item["material"];?></p>
+                      <p>Stil: <?php echo $item["stil"];?></p>
                   </div>
                   <h5 class="">Masura</h5>
                   <form novalidate="" action="include/cos.inc.php?id_prod=<?php echo $item["id_produse"];?>" method="post">
