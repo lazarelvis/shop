@@ -23,27 +23,24 @@ session_start();
   require "navbar.php";
   ?>
 <!--    CONTENT-->
-          <div class="container pt-5">
-            <div class="row"> 
-                <div class="col-md-8 col-sm-12 col-xs-12 primary-big-banner">
-                    <img class="img-fluid mt-3" src="./img/row1col2.png">
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="row ">
-                        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                            <img class="img-fluid mt-3" src="./img/row1col2.png">
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                            <img class="img-fluid mt-3" src="./img/row1col2.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container pt-5">
+      <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12 primary-big-banner">
+              <img class="img-fluid mt-3" src="./img/oferte5.png">
+          </div>
+          <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="row ">
+                  <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
+                      <img class="img-fluid mt-3" src="./img/oferta1.png" style="width: 90%;">
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
+                      <img class="img-fluid mt-3" src="./img/oferta2.png" style="width: 90%;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-
-
-        
   <div class="container mt-5 pb-5">
     <div class="containar2">  
         <div class="row row-cols-1 row-cols-md-4">
