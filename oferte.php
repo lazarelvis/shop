@@ -51,8 +51,10 @@ session_start();
                   <div class="card">
                     <div class="view overlay">
                         <img class="reducere" src="./img/reducere1.png" >
-                      <img class="card-img-top"src="./upload/<?php echo  $item['imagine'];?>"
+                      <img class="card-img-top img1"src="./upload/<?php echo  $item['imagine'];?>"
                         alt="Card image cap">
+                        <img class="card-img-top img2"src="./upload/<?php echo  $item['hoverImg'];?>"
+                             alt="Card image cap" style="display: none">
                         <a href="#!">
                         <div class="mask rgba-white-slight"></div>
                       </a>
@@ -102,7 +104,7 @@ session_start();
   </div>
 </footer>
 <!-- Footer -->
-
+    <script src="./js files/img.js"></script>
     <script src="./js files/login.js"></script>
     <script src="./js files/wrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
