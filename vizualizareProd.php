@@ -80,7 +80,7 @@ session_start();
               foreach ($array as $item) {
               ?>
               <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12 clearfix pt-5">
-                  <img class="img-fluid border border-secondary " src="./img/viz2.png">
+                  <img class="img-fluid" src="./upload/<?php echo $item["imagine"];?>">
               </div>
               <div class="col-lg-6 col-md-4 col-sm-5 col-xs-12 px-5 pt-5">
                   <h2 class="text-left font-weight-normal mb-4"><?php echo $item["denumire"];?></h2>
