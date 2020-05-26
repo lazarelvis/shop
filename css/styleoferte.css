@@ -313,10 +313,10 @@ input[type="email"],input[type="password"]{
         width:88.3%;
     }
 }
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 500px) {
 
     .primary-small-banner img{
-        width:88.3%;
+        width:100%;
     }
 }
 
