@@ -31,10 +31,10 @@ session_start();
           <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="row ">
                   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                      <img class="img-fluid mt-3" src="./img/oferta1.png" style="width: 90%;">
+                      <img class="img-fluid mt-3" src="./img/oferta1.png">
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                      <img class="img-fluid mt-3" src="./img/oferta2.png" style="width: 90%;">
+                      <img class="img-fluid mt-3" src="./img/oferta2.png">
                   </div>
               </div>
           </div>

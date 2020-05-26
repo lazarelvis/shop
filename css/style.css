@@ -409,3 +409,25 @@ input[type="button"]{
         margin: 0 auto;
     }
 }
+@media screen and (min-width: 1370px) {
+    .button-reset svg{
+        border: none;
+        background-color: white;
+        font-size: 18px;
+        position: absolute;
+        right:400px;
+        top: 37px;
+        color: #8E78FF;
+    }
+}
+@media screen and (max-width: 1370px) {
+    .button-reset svg{
+        border: none;
+        background-color: white;
+        font-size: 18px;
+        position: absolute;
+        right:380px;
+        top: 33px;
+        color: #8E78FF;
+    }
+}

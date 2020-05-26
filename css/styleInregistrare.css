@@ -318,3 +318,25 @@ body {
         margin: 0 auto;
     }
 }
+@media screen and (min-width: 1370px) {
+    .button-reset svg{
+        border: none;
+        background-color: white;
+        font-size: 18px;
+        position: absolute;
+        right: 210px;
+        top: 60px;
+        color: #8E78FF;
+    }
+}
+@media screen and (max-width: 1370px) {
+    .button-reset svg{
+        border: none;
+        background-color: white;
+        font-size: 18px;
+        position: absolute;
+        right: 195px;
+        top: 41px;
+        color: #8E78FF;
+    }
+}
