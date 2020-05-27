@@ -91,10 +91,10 @@ session_start();
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-md-3 mb-md-0 mb-3">
-        <h5 class="text-uppercase pb-2">&ensp;&nbsp;Acasa</h5>
-        <h5 class="text-uppercase pb-2">Produse</h5>
-        <h5 class="px-1 text-uppercase pb-2">&nbsp;Oferte</h5>
-        <h5 class="px-2 text-uppercase pb-2">&nbsp;&nbsp;Cont</h5>
+          <h5 class="text-uppercase pb-2">&ensp;&nbsp;<a href="./index.php" style="color: white">Acasa</a></h5>
+          <h5 class="text-uppercase pb-2"><a href="./produse.php" style="color: white">Produse</a></h5>
+          <h5 class="px-1 text-uppercase pb-2">&nbsp;<a href="./oferte.php" style="color: white">Oferte</a></h5>
+          <h5 class="px-2 text-uppercase pb-2">&nbsp;&nbsp;<a style="color: white; cursor: pointer;" href="#" class="toggle-login">Cont</a></h5>
       </div>
       <div class="col-md-3 mb-md-0 mb-3">
         <h5 class="text-center">Sediu Str Folorilor nr. 25<br/>
