@@ -340,3 +340,6 @@ body {
         color: #8E78FF;
     }
 }
+input:focus{
+    outline: none;
+}

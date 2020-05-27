@@ -431,3 +431,9 @@ input[type="button"]{
         color: #8E78FF;
     }
 }
+input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}

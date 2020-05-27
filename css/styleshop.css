@@ -326,3 +326,6 @@ input[type="email"],input[type="password"]{
         color: #8E78FF;
     }
 }
+input:focus{
+    outline: none;
+}

@@ -31,10 +31,10 @@ session_start();
           <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="row ">
                   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                      <img class="img-fluid mt-3" src="./img/oferta1.png">
+                      <img class="img-fluid mt-3" src="./img/oferte2.png">
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 primary-small-banner">
-                      <img class="img-fluid mt-3" src="./img/oferta2.png">
+                      <img class="img-fluid mt-3" src="./img/oferte1.png">
                   </div>
               </div>
           </div>
@@ -51,9 +51,9 @@ session_start();
                   <div class="card">
                     <div class="view overlay">
                         <img class="reducere" src="./img/reducere1.png" >
-                      <img class="card-img-top img1"src="./upload/<?php echo  $item['imagine'];?>"
+                      <img class="card-img-top img1<?php echo  $item['id_produse'];?>"src="./upload/<?php echo  $item['imagine'];?>"
                         alt="Card image cap">
-                        <img class="card-img-top img2"src="./upload/<?php echo  $item['hoverImg'];?>"
+                        <img class="card-img-top img2<?php echo  $item['id_produse'];?>"src="./upload/<?php echo  $item['hoverImg'];?>"
                              alt="Card image cap" style="display: none">
                         <a href="#!">
                         <div class="mask rgba-white-slight"></div>
@@ -104,7 +104,22 @@ session_start();
   </div>
 </footer>
 <!-- Footer -->
-    <script src="./js files/img.js"></script>
+    <script>
+        <?php
+        foreach ($array as $item) {
+        ?>
+        $(".img1<?php echo  $item['id_produse'];?>").mouseenter(function(){
+            $(".img1<?php echo  $item['id_produse'];?>").hide();
+            $(".img2<?php echo  $item['id_produse'];?>").show();
+        });
+        $(".img2<?php echo  $item['id_produse'];?>").mouseleave(function(){
+            $(".img2<?php echo  $item['id_produse'];?>").hide();
+            $(".img1<?php echo  $item['id_produse'];?>").show();
+        });
+        <?php
+        }
+        ?>
+    </script>
     <script src="./js files/login.js"></script>
     <script src="./js files/wrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

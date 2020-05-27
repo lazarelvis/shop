@@ -307,17 +307,6 @@ input[type="email"],input[type="password"]{
     .primary-small-banner img{
         width:unset;
     }
-}@media screen and (min-width: 501px) {
-
-    .primary-small-banner img{
-        width:88.3%;
-    }
-}
-@media screen and (max-width: 500px) {
-
-    .primary-small-banner img{
-        width:100%;
-    }
 }
 
 @media screen and (min-width: 1370px) {
@@ -341,4 +330,8 @@ input[type="email"],input[type="password"]{
         top: 41px;
         color: #8E78FF;
     }
+}
+
+input:focus{
+    outline: none;
 }
