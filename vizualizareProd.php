@@ -121,7 +121,7 @@ session_start();
                       <?php endif ?>
                   </form>
                   <h5 class="pt-5 pb-2">Pret</h5>
-                  <h3 class="pb-2 font-weight-normal"><?php echo $item["pret"];?> LEI</h3>
+                  <h3 class="pb-2 font-weight-normal"><span style="color: #FF3547;"><strike><?php echo $item["pretIntreg"];?></strike></span> <?php echo $item["pret"];?> LEI</h3>
               </div>
                   <?php
               }

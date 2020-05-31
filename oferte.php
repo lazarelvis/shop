@@ -61,7 +61,8 @@ session_start();
                     </div>
                     <div class="card-body text-center">
                       <p class="card-text pt-3"><?php echo $item["denumire"];?></p>
-                      <p class="card-text"><?php echo $item["pret"];?> lei</p>
+                      <strike><p class="card-text"><?php echo $item["pretIntreg"];?> lei</p></strike>
+                        <p class="card-text" style="color: #FF3547; font-size: 20px; font-weight: 600;"><?php echo $item["pret"];?> lei</p>
                         <form action="" method="POST">
                             <a class="btn btn-primary" href="vizualizareProd.php?id_prod=<?php echo $item["id_produse"];?>"><i class="far fa-eye" style="color: white; font-size: 16px;padding-right: 10px;"></i>Vizualizeaza produs</a>
                         </form>
