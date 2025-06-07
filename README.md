@@ -1,5 +1,5 @@
 # Shopping website using PHP/HTML/CSS, jQuery, and MySQL for data storage
-# Make sure you install Xampp and have the Apache server and MySQL server on
+## Make sure you install Xampp and have the Apache server and MySQL server on
 
 ![image](https://github.com/user-attachments/assets/f47899ba-d8d7-4070-b0b7-66ce8ca1b9b8)
 
