@@ -7,7 +7,7 @@ Make sure to move the whole structure of files in the correct folder, and that i
 
 ![image](https://github.com/user-attachments/assets/1a910fad-7766-4e72-aed0-889a8a565670)
 
-#after you have the files in the right place and the correct database, it should looklike  this 
+#after you have the files in the right place and the correct database, it should look like  this 
 
 ![image](https://github.com/user-attachments/assets/39ee2dc1-bd48-4c95-bd0f-b0d293e5a580)
 
